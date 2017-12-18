@@ -120,6 +120,10 @@ p {
 	display: block;
 }
 
+.main-header__link:hover {
+	color: #b50b1e;
+}
+
 .main-header__link--logo {
   font-family: 'Caviar Dreams Bold', arial;
   font-weight: bold;
@@ -155,6 +159,10 @@ p {
   height: 40px;
   margin-left: 16px;
   cursor: pointer;
+}
+
+.online-pleer__button:hover {
+  background-color: #982127
 }
 
 .online-pleer__button--play {
@@ -223,26 +231,35 @@ p {
   justify-content: space-between;
 }
 
-.genres-stations__link {
-  display: block;
-  height: 180px;
-  width: 220px;
-  text-align: center;
-  color: #2a333c;
-  font-size: 18px;
-  padding-top: 139px;
-  padding-bottom: 13px;
-  text-decoration: none;
-  border: 1px solid #e1e1e1;
-  border-radius: 3px;
-    position: relative;
-}
 .genres-stations__item {
 	display: inline-block;
   margin-bottom: 25px;
 }
 
-.genres-stations__link--more {
+.genres-stations__link,
+.genres-stations__link-more {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+
+.genres-stations__link {
+  height: 180px;
+  width: 220px;
+  color: #2a333c;
+  font-size: 18px;
+  padding-top: 139px;
+  padding-bottom: 13px;
+  position: relative;
+}
+
+.genres-stations__link:hover {
+	background: #e1e1e1;
+}
+
+.genres-stations__link-more {
 	line-height: 40px;
 	width: 300px;
 	height: auto;
@@ -415,6 +432,10 @@ p {
 	cursor: pointer;
 	border-radius: 3px;
 	font-weight: bold;
+}
+
+.contact-us__submit-button:hover {
+	background: #cc2235;
 }
 
 .main-footer__copyright,

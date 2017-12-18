@@ -21,6 +21,29 @@ h2 {
   background: white;
   margin: 0;
   padding: 50px calc((100% - 940px)/2);
+  position: relative;
+}
+
+h2::before,
+h2::after {
+  content: '';
+  position: absolute;
+  background: #dddddd;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2::before {
+  left: calc(50% - 500px);
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+h2::after {
+  left: 0;
+  width: calc(50% - 495px);
+  height: 2px;
 }
 
 ul,
@@ -66,7 +89,8 @@ p {
 }
 
 .main-header {
-  background: #982127;
+  background: #982127 url('./img/bg-header.jpg') no-repeat;
+  background-size: cover;
   color: white;
   padding-top: 26px;
   padding-bottom: 120px;
@@ -111,6 +135,11 @@ p {
   padding: 11px 0;
 }
 
+.online-pleer__current-song {
+  margin-left: 20px;
+	width: 560px;
+}
+
 .online-pleer__button,
 .online-pleer__current-song {
 	display: inline-block;
@@ -121,10 +150,10 @@ p {
   background: none;
   border-radius: 50%;
   color: transparent;
-  border: 2px solid white;
+  border: none;
   width: 40px;
   height: 40px;
-  margin-left: 20px;
+  margin-left: 16px;
   cursor: pointer;
 }
 
@@ -134,10 +163,54 @@ p {
   margin-left: 0;
 }
 
+.online-pleer__song-name {
+  width: 475px;
+  display: inline-block;
+}
+
 .online-pleer__song-timer {
+  display: inline-block;
+  width: 80px;
   font-size: 12px;
   line-height: 18px;
   vertical-align: middle;
+  text-align: right;
+}
+
+.online-pleer__progress-bar {
+	padding: 11px 0;
+	position: relative;
+}
+
+.progress-bar__dot {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: white;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.progress-bar__base-line,
+.progress-bar__line {
+  border-radius: 3px;
+  height: 8px;
+}
+
+.progress-bar__line {
+  position: absolute;
+  bottom: 11px;
+  width: 50%;
+  background: #72040d;
+}
+
+.progress-bar__base-line {
+	width: 100%;
+	background: #000;
 }
 
 .genres-stations {
@@ -162,6 +235,7 @@ p {
   text-decoration: none;
   border: 1px solid #e1e1e1;
   border-radius: 3px;
+    position: relative;
 }
 .genres-stations__item {
 	display: inline-block;
@@ -180,18 +254,60 @@ p {
 }
 
 .upcoming-events {
-	background: #b40b1e;
+	background: #b40b1e url('./img/bg-events.jpg') no-repeat;
+  background-size: cover;
 	color: white;
+  position: relative;
+}
+
+.upcoming-events::before {
+	content: '';
+	position: absolute;
+	background: url('./img/people.png');
+	width: 544px;
+	height: 582px;
+	left: 50%;
+	bottom: 0;
+	z-index: 10;
+}
+
+.upcoming-events .container {
+	position: relative;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.upcoming-events .container::before {
+	content: '';
+	position: absolute;
+	bottom: 28px;
+	width: 2px;
+	left: 28px;
+	background: white;
+	top: 33px;
 }
 
 .upcoming-events__event {
 	padding: 30px;
 	padding-left: 42px;
 	padding-right: 560px;
+  position: relative;
+}
+
+.upcoming-events__event::before {
+	content: '';
+	position: absolute;
+	top: 35px;
+	left: 3px;
+	background: white;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
 }
 
 .upcoming-events__singer-name {
 	font-size: 48px;
+	padding: 12px 0;
 }
 
 .upcoming-events__event p {
@@ -219,7 +335,20 @@ p {
 }
 
 .latest-news-item__date {
-  font-size: 11px;
+	font-size: 11px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.latest-news-item__date::before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	background: #dddddd;
 }
 
 .latest-news-item__text {
@@ -238,7 +367,8 @@ p {
 
 .contact-us {
 	padding-bottom: 60px;
-	background: #30333c;
+	background: #30333c url('./img/bg-subscribe.jpg') no-repeat;
+  background-size: cover;
 	color: white;
 }
 
@@ -309,5 +439,120 @@ p {
 	display: block;
 	width: 60px;
 	height: 60px;
-	background: #30333c;
+  position: relative;
+}
+
+.online-pleer__button--play,
+.online-pleer__button--volume,
+.online-pleer__button--prev,
+.online-pleer__button--next,
+.online-pleer__button--repeat,
+.online-pleer__button--playlist,
+.genres-stations__link--trending::before,
+.genres-stations__link--rock::before,
+.genres-stations__link--rnb::before,
+.genres-stations__link--alternative::before,
+.genres-stations__link--country::before,
+.genres-stations__link--pop::before,
+.genres-stations__link--jazz::before,
+.genres-stations__link--reggae::before,
+.main-footer-socials__link::before {
+  background: url('./img/sprite.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.genres-stations__link::before,
+.main-footer-socials__link::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.online-pleer__button--play { background-position: -10px -772px; }
+.online-pleer__button--volume { background-position: -10px -1040px; }
+.online-pleer__button--prev { background-position: -10px -940px; }
+.online-pleer__button--next { background-position: -10px -840px; }
+.online-pleer__button--repeat { background-position: -10px -990px; }
+.online-pleer__button--playlist { background-position: -10px -890px; }
+
+.genres-stations__link--trending::before {
+  background-position: -10px -546px;
+  width: 67px;
+  height: 71px;
+}
+
+.genres-stations__link--rock::before {
+  background-position: -10px -199px;
+  width: 83px;
+  height: 82px;
+}
+
+.genres-stations__link--rnb::before {
+  background-position: -10px -0px;
+  width: 99px;
+  height: 94px;
+}
+
+.genres-stations__link--alternative::before {
+  background-position: -10px -627px;
+  width: 64px;
+  height: 67px;
+}
+
+.genres-stations__link--country::before {
+  background-position: -10px -380px;
+  width: 70px;
+  height: 70px;
+}
+
+.genres-stations__link--pop::before {
+  background-position: -10px -104px;
+  width: 85px;
+  height: 85px;
+}
+
+.genres-stations__link--jazz::before {
+  background-position: -10px -460px;
+  width: 68px;
+  height: 76px;
+}
+
+.genres-stations__link--reggae::before {
+  background-position: -10px -291px;
+  width: 76px;
+  height: 79px;
+}
+
+.main-footer-socials__link--tw::before {
+  background-position: -60px -840px;
+  width: 24px;
+  height: 19px;
+}
+
+.main-footer-socials__link--in::before {
+  background-position: -60px -869px;
+  width: 23px;
+  height: 23px;
+}
+
+.main-footer-socials__link--pi::before {
+  background-position: -60px -902px;
+  width: 22px;
+  height: 27px;
+}
+
+.main-footer-socials__link--yo::before {
+  background-position: -60px -939px;
+  width: 22px;
+  height: 16px;
+}
+
+.main-footer-socials__link--fb::before {
+  background-position: -84px -627px;
+  width: 15px;
+  height: 28px;
 }

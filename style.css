@@ -1,0 +1,313 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 72px;
+  padding-right: 320px;
+  text-transform: capitalize;
+  padding-left: 20px;
+  text-shadow: 2px 11px 5px rgba(0,0,0,.33);
+}
+
+h2 {
+  font-size: 36px;
+  color: #2a333c;
+  background: white;
+  margin: 0;
+  padding: 50px calc((100% - 940px)/2);
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+  padding: 0 20px;
+}
+
+.button-more {
+  display: block;
+  padding: 0 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #c12127;
+  text-align: center;
+}
+
+.button-more:hover {
+  color: white;
+  background-color: #c12127;
+  border-color: #c12127;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);width: 1px;
+    height: 1px;
+    margin: -1px; padding: 0; border: 0;
+}
+
+.main-header {
+  background: #982127;
+  color: white;
+  padding-top: 26px;
+  padding-bottom: 120px;
+}
+
+.main-header .container {
+  padding: 0;
+}
+
+.main-header__menu { display: flex }
+
+.main-header__menu-item {
+	display: inline-block;
+}
+
+.main-header__menu-item:first-of-type {
+	flex-grow: 1;
+}
+
+.main-header__link {
+	color: white;
+	text-decoration: none;
+	padding: 0 20px;
+	font-size: 14px;
+	line-height: 47px;
+	text-transform: uppercase;
+	display: block;
+}
+
+.main-header__link--logo {
+  font-family: 'Caviar Dreams Bold', arial;
+  font-weight: bold;
+  font-size: 36px;
+  text-transform: lowercase;
+}
+
+.online-pleer {
+	background: #b50b1e;
+	font-weight: 400;
+	font-size: 14px;
+	color: white;
+  padding: 11px 0;
+}
+
+.online-pleer__button,
+.online-pleer__current-song {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.online-pleer__button {
+  background: none;
+  border-radius: 50%;
+  color: transparent;
+  border: 2px solid white;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.online-pleer__button--play {
+  height: 58px;
+  width: 58px;
+  margin-left: 0;
+}
+
+.online-pleer__song-timer {
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.genres-stations {
+	padding-bottom: 40px;
+}
+
+.genres-stations__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.genres-stations__link {
+  display: block;
+  height: 180px;
+  width: 220px;
+  text-align: center;
+  color: #2a333c;
+  font-size: 18px;
+  padding-top: 139px;
+  padding-bottom: 13px;
+  text-decoration: none;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+.genres-stations__item {
+	display: inline-block;
+  margin-bottom: 25px;
+}
+
+.genres-stations__link--more {
+	line-height: 40px;
+	width: 300px;
+	height: auto;
+	margin: 12px auto 0;
+	font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #c12127;
+}
+
+.upcoming-events {
+	background: #b40b1e;
+	color: white;
+}
+
+.upcoming-events__event {
+	padding: 30px;
+	padding-left: 42px;
+	padding-right: 560px;
+}
+
+.upcoming-events__singer-name {
+	font-size: 48px;
+}
+
+.upcoming-events__event p {
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.latest-news__item {
+	width: 300px;
+	display: inline-block;
+	margin-right: 16px;
+	padding: 20px 20px 30px;
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	color: #2a333c;
+}
+
+.latest-news__item:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+.latest-news-item__title {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.latest-news-item__date {
+  font-size: 11px;
+}
+
+.latest-news-item__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.latest-news-item__button-more {
+	line-height: 31px;
+	border: 1px solid #eee;
+	margin-top: 28px;
+	display: inline-block;
+  border-radius: 2px;
+}
+
+.contact-us {
+	padding-bottom: 60px;
+	background: #30333c;
+	color: white;
+}
+
+.contact-us p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact-us .container {
+  padding-right: 340px;
+}
+
+.contact-us__title {
+	font-family: 'Lora', serif;
+	font-size: 60px;
+	text-shadow: 0 7px 15px rgba(0,0,0,.40);
+	padding-top: 25px;
+	line-height: 92px;
+}
+
+.contact-us__form {
+  margin-top: 30px;
+  position: relative;
+}
+
+.contact-us__email-input {
+	width: 100%;
+	line-height: 60px;
+	padding: 0 140px 0 20px;
+	border-radius: 3px;
+	border: none;
+}
+
+.contact-us__submit-button {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	background: #b50b1e;
+	text-transform: uppercase;
+	line-height: 50px;
+	padding: 0 16px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.main-footer__copyright,
+.main-footer__socials {
+  display: inline-block;
+  line-height: 100px;
+  vertical-align: middle;
+}
+
+.main-footer__copyright {
+	margin-right: 200px;
+  color: #2a333c;
+}
+
+.main-footer-socials__item {
+	display: inline-block;
+	vertical-align: middle;
+  margin: 0 8px;
+}
+
+.main-footer-socials__link {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background: #30333c;
+}

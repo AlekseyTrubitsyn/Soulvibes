@@ -61,7 +61,7 @@ p {
 .container {
 	width: 980px;
 	margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 19px;
 }
 
 .button-more {
@@ -412,6 +412,7 @@ p {
 }
 
 .contact-us__email-input {
+  min-height: 60px;
 	width: 100%;
 	line-height: 60px;
 	padding: 0 140px 0 20px;
@@ -421,7 +422,7 @@ p {
 
 .contact-us__submit-button {
 	position: absolute;
-	bottom: 5px;
+	top: calc(50% - 25px);
 	right: 5px;
 	background: #b50b1e;
 	text-transform: uppercase;
